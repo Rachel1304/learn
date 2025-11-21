@@ -11,10 +11,14 @@
 <body>
   <button>bg color aléatoire</button>
   <script>
-    const prenom = prompt("Écris ton prénom")
-    const age = prompt("Écris maintenant ton âge")
-    const resultat = "Tu t'appelles " + prenom + " et tu as " + age + " ans."
-    alert(resultat)
+
+    // const hasard = Math.floor(Math.random() * 10)
+    const hasard = (limite) => {
+      console.log(limite)
+      return Math.floor(Math.random() * limite)
+    }
+    const r56 = hasard(56)
+    console.log(r56)
   </script>
 </body>
 
