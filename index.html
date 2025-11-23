@@ -9,16 +9,21 @@
 </head>
 
 <body>
-  <button>bg color aléatoire</button>
+  <p>La liste de prénom:</p>
   <script>
-
-    // const hasard = Math.floor(Math.random() * 10)
-    const hasard = (limite) => {
-      console.log(limite)
-      return Math.floor(Math.random() * limite)
+    const getListeFiltre = (listePrenoms, taille) => {
+      const liste = []
+      for (let i = 0; i < listePrenoms.length; i++) {
+        if (listePrenoms[i].length <= taille) {
+          liste.push(listePrenoms[i])
+        }
+      }
+      return liste
     }
-    const r56 = hasard(56)
-    console.log(r56)
+    const listePrenoms1 = ["Rachel", "Billy", "Chaggy", "Eva", "Lili", "Fredo", "Marie"]
+    const listePrenoms2 = ["Florette", "Brandy", "Djanfar"]
+    console.log(getListeFiltre(listePrenoms1, 5))
+    console.log(getListeFiltre(listePrenoms2, 7))
   </script>
 </body>
 
